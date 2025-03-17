@@ -27,16 +27,11 @@ modelfile = "voting_model.pkl"
 # Load the trained model with caching for faster performance
 @st.cache_resource
 def load_model():
-    if not os.path.exists(modelfile):
-        st.error(f"Model file not found: {modelfile}")
-        return None
-    
-    try:
+    if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
-            model = joblib.load(f)  # Attempt to load the model
-        return model
-    except Exception as e:
-        st.error(f"Error loading model: {e}")
+            return pickle.load(f)
+    else:
+        st.error(f"Model file not found: {modelfile}")
         return None
 
 # Load the model
