@@ -25,12 +25,11 @@ modelfile = "./voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 def load_model():
-    if os.path.exists(modelfile):
-        with open(modelfile, "rb") as f:
-            return pickle.load(f)
-    else:
-        st.error(f"Model file not found: {modelfile}")
-        return None
+    file_path = "voting_model.pkl"  # Ensure correct path
+    with open(file_path, "rb") as f:
+        return pickle.load(f)  # Load model correctly
+
+
 
 # Load the model
 voting_model = load_model()
