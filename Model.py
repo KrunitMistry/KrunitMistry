@@ -28,10 +28,10 @@ st.caption(
 @st.cache_resource
     with open("voting_model.pkl", "rb") as f:
         try:
-        model = pickle.load(f)
-        print("Model loaded successfully!")
+            model = pickle.load(f)
+            print("Model loaded successfully!")
         except Exception as e:
-        print("Error loading model:", e)
+            print("Error loading model:", e)
 
 # Load the model
 voting_model = load_model()
