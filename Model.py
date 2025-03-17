@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import os
-import joblib
+
 from PIL import Image
 
 # Set the page configuration
