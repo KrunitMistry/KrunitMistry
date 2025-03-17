@@ -21,10 +21,9 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "/voting_model.pkl"
+modelfile = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
-@st.cache
 def load_model():
     if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
