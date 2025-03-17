@@ -70,7 +70,7 @@ def wait_time_predictor(
 
 # Sidebar input parameters
 with st.sidebar:
-    img_path = "D:\Internship_Course\Week 06\Dependencies/assets\supply_chain_optimisation.jpg"
+    img_path = "supply_chain_optimisation.jpg"
     if os.path.exists(img_path):
         img = Image.open(img_path)
         st.image(img)
