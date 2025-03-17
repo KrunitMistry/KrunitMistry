@@ -22,12 +22,12 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "voting_model.pkl"
+B = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
 def load_model():
-    with open(modelfile, "rb") as f:
+    with open(B, "rb") as f:
             return pickle.load(f)
     
 voting_model = load_model()
