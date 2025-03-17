@@ -26,12 +26,10 @@ st.caption(
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
-def load_model():  # No indentation issues here
-    with open("voting_model.pkl", "rb") as f:
-        return pickle.load(f)  # Correct indentation
-
-
-
+def load_model():
+    with open(modelfile, "rb") as f:
+            return pickle.load(f)
+    
 voting_model = load_model()
 
 # Define the wait time predictor function
