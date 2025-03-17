@@ -30,7 +30,7 @@ def load_model():
         with open(modelfile, "rb") as f:
             return pickle.load(f)
     else:
-        st.error(f"Model file not found": "{modelfile}")
+        st.error(f"Model file not found:" "{modelfile}")
         return None  # Prevents execution errors if model is missing
 
 # Load the model
