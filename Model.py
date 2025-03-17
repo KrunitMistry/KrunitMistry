@@ -32,8 +32,7 @@ def load_model():  # No indentation issues here
 
 
 
-# Load the model
-voting_model =load_model()
+voting_model = load_model()
 
 # Define the wait time predictor function
 def wait_time_predictor(
