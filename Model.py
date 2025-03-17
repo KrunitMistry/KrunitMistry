@@ -31,9 +31,9 @@ def load_model():
 
     with open(file_path, "rb") as f:
         return pickle.load(f)
-    else:
-        st.error(f"Model file not found: {file_path}")
-        return None
+   # else:
+   #     st.error(f"Model file not found: {file_path}")
+    #    return None
 
 # Load the model
 voting_model = load_model()
