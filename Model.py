@@ -26,11 +26,11 @@ st.caption(
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
-with open("voting_model.pkl", "rb") as f:
-    try:
+    with open("voting_model.pkl", "rb") as f:
+        try:
         model = pickle.load(f)
         print("Model loaded successfully!")
-    except Exception as e:
+        except Exception as e:
         print("Error loading model:", e)
 
 # Load the model
