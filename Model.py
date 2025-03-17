@@ -3,6 +3,7 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+import joblib
 import os
 from PIL import Image
 
@@ -21,7 +22,7 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "voting_model.pkl"
+modelfile = joblib.load("voting_model.pkl")
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
