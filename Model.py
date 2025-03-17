@@ -26,12 +26,11 @@ st.caption(
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
-    with open("voting_model.pkl", "rb") as f:
-        try:
-            model = pickle.load(f)
-            print("Model loaded successfully!")
-        except Exception as e:
-            print("Error loading model:", e)
+    def load_model():  # No indentation issues here
+        with open("voting_model.pkl", "rb") as f:  # Correct indentation
+            return pickle.load(f)  # Correct indentation
+
+
 
 # Load the model
 voting_model = load_model()
