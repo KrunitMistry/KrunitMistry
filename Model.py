@@ -24,7 +24,7 @@ st.caption(
 modelfile = "./voting_model.pkl"
 
 # Load the trained model with caching for faster performance
-@st.cache_resource
+@st.cache
 def load_model():
     if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
