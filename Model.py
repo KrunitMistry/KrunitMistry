@@ -25,7 +25,7 @@ modelfile = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache
-def load_model():
+def load_model{}:
     if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
             return pickle.load(f)
@@ -34,7 +34,7 @@ def load_model():
         return None  # Prevents execution errors if model is missing
 
 # Load the model
-voting_model = load_model()
+voting_model = load_model{}
 
 if voting_model is None:
     st.stop()
