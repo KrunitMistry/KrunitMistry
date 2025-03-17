@@ -1,6 +1,5 @@
 # Import required libraries
 import streamlit as st
-import joblib
 import pickle
 import numpy as np
 import pandas as pd
@@ -23,14 +22,14 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = joblib.load("voting_model.pkl")
+modelfile = pickle.load("voting_model.pkl")
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
 def load_model():
     if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
-            return joblib.load(f)
+            return pickle.load(f)
     else:
         st.error(f"Model file not found: {modelfile}")
         return None
