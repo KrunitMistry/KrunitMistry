@@ -25,7 +25,7 @@ st.caption(
 modelfile = "./voting_model.pkl"
 def load_model():
     with open(modelfile, "rb") as f:
-        model = pickle.load(f)
+        model = st.load(f)
     return model
 
 voting_model = load_model()
