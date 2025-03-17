@@ -22,7 +22,7 @@ st.caption(
 
 
 # Load the trained ensemble model from the saved pickle file.
-modelfile = "./voting_model.pkl"
+modelfile = "KrunitMistry/voting_model.pkl"
 def load_model():
     with open(modelfile, "rb") as f:
         model = st.load(f)
@@ -66,7 +66,7 @@ def waitime_predictor(
 
 # Define the input parameters using Streamlit's sidebar. These parameters include the purchased day of the week, month, and year, product size, weight, geolocation state of the customer and seller, and distance.
 with st.sidebar:
-    img = Image.open("./assets/supply_chain_optimisation.jpg")
+    img = Image.open("KrunitMistry/supply_chain_optimisation.jpg")
     st.image(img)
     st.header("Input Parameters")
     purchase_dow = st.number_input(
