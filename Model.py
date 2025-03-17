@@ -22,7 +22,7 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = joblib.load("voting_model.pkl")
+modelfile = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
@@ -33,7 +33,7 @@ def load_model():
     
     try:
         with open(modelfile, "rb") as f:
-            model = pickle.load(f)  # Attempt to load the model
+            model = joblib.load(f)  # Attempt to load the model
         return model
     except Exception as e:
         st.error(f"Error loading model: {e}")
