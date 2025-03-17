@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import os
+import joblib
 from PIL import Image
 
 # Set the page configuration
@@ -28,7 +29,7 @@ modelfile = "voting_model.pkl"
 def load_model():
     if os.path.exists(modelfile):
         with open(modelfile, "rb") as f:
-            return pickle.load(f)
+            return joblib.load(f)
     else:
         st.error(f"Model file not found: {modelfile}")
         return None
