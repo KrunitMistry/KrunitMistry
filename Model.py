@@ -4,7 +4,6 @@ import pickle
 import numpy as np
 import pandas as pd
 import os
-
 from PIL import Image
 
 # Set the page configuration
@@ -22,14 +21,19 @@ st.caption(
 )
 
 # Define the model file path
-B = "voting_model.pkl"
+modelfile = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
 def load_model():
-    with open(B, "rb") as f:
+    if os.path.exists(modelfile):
+        with open(modelfile, "rb") as f:
             return pickle.load(f)
-    
+    else:
+        st.error(f"Model file not found: {modelfile}")
+        return None
+
+# Load the model
 voting_model = load_model()
 
 # Define the wait time predictor function
