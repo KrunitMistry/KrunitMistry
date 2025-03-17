@@ -21,7 +21,7 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "./voting_model.pkl"
+modelfile = "D:\Internship_Course\Week 06\Dependencies/voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
@@ -70,7 +70,7 @@ def wait_time_predictor(
 
 # Sidebar input parameters
 with st.sidebar:
-    img_path = "./assets/supply_chain_optimisation.jpg"
+    img_path = "D:\Internship_Course\Week 06\Dependencies/assets/supply_chain_optimisation.jpg"
     if os.path.exists(img_path):
         img = Image.open(img_path)
         st.image(img)
