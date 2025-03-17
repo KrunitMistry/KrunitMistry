@@ -63,7 +63,7 @@ def waitime_predictor(
 # Define the input parameters using Streamlit's sidebar.
 with st.sidebar:
     
-    img = Image.open(r"D:\Internship_Course\Week 06\Dependencies\assets\supply_chain_optimisation.jpg")
+    img = Image.open("./assets/supply_chain_optimisation.jpg")
     st.image(img)
     st.header("Input Parameters")
     purchase_dow = st.number_input(
