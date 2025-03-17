@@ -21,7 +21,7 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "Trained-Model.pkl"
+modelfile = "voting_model.pkl"
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
