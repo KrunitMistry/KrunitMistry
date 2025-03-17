@@ -26,14 +26,12 @@ st.caption(
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
-def load_model():
-    file_path = "voting_model.pkl"  # Adjust the path if needed
-
-    with open(file_path, "rb") as f:
-        return pickle.load(f)
-   # else:
-   #     st.error(f"Model file not found: {file_path}")
-    #    return None
+with open("voting_model.pkl", "rb") as f:
+    try:
+        model = pickle.load(f)
+        print("Model loaded successfully!")
+    except Exception as e:
+        print("Error loading model:", e)
 
 # Load the model
 voting_model = load_model()
