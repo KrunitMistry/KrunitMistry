@@ -1,5 +1,6 @@
 # Import required libraries
 import streamlit as st
+import joblib
 import pickle
 import numpy as np
 import pandas as pd
@@ -22,7 +23,7 @@ st.caption(
 )
 
 # Define the model file path
-modelfile = "voting_model.pkl"
+modelfile = joblib.load("voting_model.pkl")
 
 # Load the trained model with caching for faster performance
 @st.cache_resource
