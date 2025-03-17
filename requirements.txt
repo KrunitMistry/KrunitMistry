@@ -1,7 +1,1 @@
-numpy
-scikit-learn>=1.0,<2.0
-pandas
-pickle
-xgboost
-streamlit
-Pillow
+scikit-learn
