@@ -6,6 +6,8 @@ import pandas as pd
 import joblib
 import os
 from PIL import Image
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
 
 # Set the page configuration
 st.set_page_config(page_title="Timelytics", page_icon="📦", layout="wide")
